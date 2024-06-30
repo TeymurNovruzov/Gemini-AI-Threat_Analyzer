@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <link rel="stylesheet" href="yoxlama.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="#">Threat Reporter App</a></h2>
+
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="yoxlama.html" class="nav_link">Home</a></li>
+            <li><a href="login.html" class="nav_link">Login</a></li>
+            <li><a href="register.html" class="nav_link">Register</a></li>
+            
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle"  />
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="row container">
+          <div class="column">
+            <h2>Threat Reporter AI Web Application <br /></h2>
+            <p>Do you want to use that?</p>
+            <div class="buttons">
+              <a class="btn btn-warning" href="http://192.168.60.172:5000/" style="margin-top: 100px;">Let's Check</a>
+            
+            </div>
+          </div>
+          <div class="column">
+            <div class="container">
+                <div class="loader">
+                    <span> AI Platform
+                    </span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+</html>
